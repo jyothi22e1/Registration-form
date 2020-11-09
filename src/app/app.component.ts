@@ -25,7 +25,7 @@ export class AppComponent {
       { type: 'maxlength', message: 'password length.' }
     ],
     'confirmpassword': [
-      { type: 'required', message: 'password is required.' },
+      { type: 'required', message: ' confirm password is required.' },
       { type: 'minlength', message: 'password length.' },
       { type: 'maxlength', message: 'password length.' }
     ],
