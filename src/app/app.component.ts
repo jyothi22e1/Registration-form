@@ -11,19 +11,13 @@ export class AppComponent {
 
   error_messages = {
     'fname': [
-      { type: 'required', message: 'First Name is required.' },
+      { type: 'required', message: ' Name is required.' },
     ],
 
     'lname': [
-      { type: 'required', message: 'Last Name is required.' }
+      { type: 'required', message: 'Mobile Number is required.' }
     ],
 
-    'email': [
-      { type: 'required', message: 'Email is required.' },
-      { type: 'minlength', message: 'Email length.' },
-      { type: 'maxlength', message: 'Email length.' },
-      { type: 'required', message: 'please enter a valid email address.' }
-    ],
 
     'password': [
       { type: 'required', message: 'password is required.' },
