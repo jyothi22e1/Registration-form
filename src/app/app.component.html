@@ -1,0 +1,88 @@
+<div class="container">
+
+	<div style="margin: 30px">
+		<h2 class="ion-text-center" style="color: skyblue; background-color:black; text-align:center">Register</h2><br/>
+		<div>
+			<span style="color:skyblue; position: relative; top:20px; font-style:bold;  font-weight:bolder; text-decoration:underline;margin:5px">INPUT TRADER</span>
+			<span class="title" style="position: relative;top: 20px;font-style: bold;font-weight: bolder;margin:60px">RETAIL TRADER</span>
+		</div><br/>
+		<br/><br/>
+
+		<form [formGroup]="loginForm">
+			<div class="form-group">
+				<label>Name*</label>
+				<input class="form-control" formControlName="fname" type="text" />
+			</div>
+				<div class="error-messages">
+					<ng-container *ngFor="let error of error_messages.fname">
+						<div class="error-message"
+							*ngIf="loginForm.get('fname').hasError(error.type) && (loginForm.get('fname').dirty || loginForm.get('fname').touched)">
+							{{ error.message }}
+						</div>
+					</ng-container>
+				</div>
+
+				<div class="form-group">
+					<label>Mobile Number*</label>
+					<input class="form-control" formControlName="lname" type="text" />
+			</div>
+					<div class="error-messages">
+						<ng-container *ngFor="let error of error_messages.lname">
+							<div class="error-message"
+								*ngIf="loginForm.get('lname').hasError(error.type) && (loginForm.get('lname').dirty || loginForm.get('lname').touched)">
+								{{ error.message }}
+							</div>
+						</ng-container>
+					</div>
+
+					<div class="form-group">
+						<label>Alternative mobile number</label>
+						<input class="form-control" formControlName="email" type="text" />
+			</div>
+						<div class="error-messages">
+							<ng-container *ngFor="let error of error_messages.email">
+								<div class="error-message" *ngIf="loginForm.get('email').hasError(error.type) && 
+    (loginForm.get('email').dirty || loginForm.get('email').touched)">
+									{{ error.message }}
+								</div>
+							</ng-container>
+						</div>
+
+						<div class="form-group">
+							<label>Password*</label>
+							<input class="form-control" formControlName="password" type="password" />
+			</div>
+							<div class="error-messages">
+								<ng-container *ngFor="let error of error_messages.password">
+									<div class="error-message"
+										*ngIf="loginForm.get('password').hasError(error.type) && (loginForm.get('password').dirty || loginForm.get('password').touched)">
+										{{ error.message }}
+									</div>
+								</ng-container>
+							</div>
+
+							<div class="form-group">
+								<label>Confirm Password*</label>
+								<input class="form-control" formControlName="confirmpassword" type="password" />
+			</div>
+								<div class="error-messages">
+									<ng-container *ngFor="let error of error_messages.confirmpassword">
+										<div class="error-message"
+											*ngIf="loginForm.get('confirmpassword').hasError(error.type) && (loginForm.get('confirmpassword').dirty || loginForm.get('confirmpassword').touched)">
+											{{ error.message }}
+										</div>
+									</ng-container>
+								</div><br/>
+								<label>
+      <input type="checkbox" name="active" ngModel required >  I Accept the 
+      <span style="color:skyblue;font-style:bold;font-weight:bolder">Terms</span>
+      and
+      <span style="color:skyblue;font-style:bold;font-weight:bolder">Conditions</span>
+      </label>
+
+								<br/>
+								<br/><br/>
+								<button class="form-control btn btn-primary" [disabled]="!loginForm.valid">SUBMIT</button>
+		</form>
+	</div>
+</div>
